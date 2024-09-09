@@ -74,8 +74,8 @@ public class doctor_Pages extends StartupPage {
 	
 	/**@Test4
 	 * about this method selectNEUROSURGERYFromDepartmentDropdownAndVerifySelection() 
-	 * @param : get the data from JSON file as type Map<String, String> expectedData
-	 * @description : it will select the country as per JSON expected data
+	 * @param : get the data from Excel file as type Map<String, String> expectedData
+	 * @description : it will select the country as per Excel expected data
 	 * @return : String
 	 * @author : YAKSHA
 	 */
