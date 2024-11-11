@@ -7,6 +7,41 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class doctor_Pages extends StartupPage {
+	
+	By usernameTextbox = By.xpath(" ");
+	By passwordTextbox = By.xpath(" ");
+	By signInButton = By.xpath(" ");
+	By registeredPatientTextElement = By.xpath(" ");
+	By doctorTab = By.xpath(" ");
+	By doctorToggle = By.xpath(" ");	
+	By outPatientSubModule = By.xpath(" ");	
+	By inPatientDepartmentSubModule = By.xpath(" ");	
+	By patientRecordSubModule = By.xpath(" ");	
+	By showDoctorWisePatientListCheckBox = By.id(" ");	
+	By departmentFilterDropdown = By.id(" ");	
+	By neurosurgeryOption = By.xpath(" ");	
+	By myFavoritesButton = By.xpath(" ");	
+	By pendingListButton = By.xpath(" ");	
+	By showDetailsButton = By.xpath(" ");	
+	By freeTextTemplatePageTitle = By.xpath(" ");	
+	By XbuttonInFreeTextTemplate = By.xpath(" ");
+	By doctorNameWhereHospitalNumberIs2312000010 = By.xpath(" ");
+	By previewIcon = By.xpath(" ");
+	By problemsModule = By.xpath(" ");
+	By surgicalHistoryTab = By.xpath(" ");
+	By addNewButton = By.xpath(" ");
+	By addButton = By.xpath(" ");
+	By searchProblemFieldErrorMessage = By.xpath("  ");
+	By dischargeSummaryModule = By.xpath(" ");
+	By saveButton = By.xpath(" ");
+	By hospitalCourseTextArea = By.xpath(" ");
+	By treatmentDuringHospitalStayTextArea = By.xpath(" ");
+	By conditionOnDischargeTextArea = By.xpath(" ");
+	By yesRadioButton = By.id(" ");
+	By noRadioButton = By.id(" ");
+	By xButton = By.xpath(" ");
+	By pendingReportsTextArea = By.xpath(" ");
+	By popupErrorMessage = By.xpath(" ");
 
 	String pageName = this.getClass().getSimpleName();
 	public doctor_Pages(WebDriver driver) {
