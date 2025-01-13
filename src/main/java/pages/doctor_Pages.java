@@ -229,47 +229,4 @@ public class doctor_Pages extends StartupPage {
 		return null;
 	}
 	
-	/**@Test13
-	 * about this method verifyThatTheYesRadioButtonIsSelectedAndDeselect() 
-	 * @param : null
-	 * @description : On the "Discharge Summary" page of Profile "Sonia Gandhi", select "Yes" radio button from the "Show Result on Report" label and then verify that the "Yes" radio button is selected or not.
-                      After validation, then deselect the "Yes" radio button from the "Show Result on Report" label 
-	 * @return : Boolean
-	 * @author : Yaksha
-	 */
-	public Boolean verifyThatTheYesRadioButtonIsSelectedAndDeselect() throws Exception {
-		return false;
-	}
-	
-	
-	/**@Test14
-	 * about this method clickAndSendValueToThePendingReportsTextAreaUsingJavaScript() 
-	 * @param : Map<String, String>
-	 * @description : On the "Discharge Summary" page of Profile "Sonia Gandhi", verify that the "Pending Reports" text area is present or not?
-                      If Present, then click & send value to the "Pending Reports" text area using the JavaScript
-	 * @return : Boolean
-	 * @author : Yaksha
-	 */
-	public Boolean clickAndSendValueToThePendingReportsTextAreaUsingJavaScript(Map<String, String> expectedData) throws Exception {
-			
-		return false;
-	}
-	
-	
-	
-	/**@Test15
-	 * about this method verifyTheNotificationPopupErrorMessageAfterClickOnSaveButton() 
-	 * @param : null
-	 * @description : On the "Discharge Summary" page of Profile "Sonia Gandhi", verify that the "Save" button is present or not?
-                      If present, then click on the save button directly without fill any information and it will throw a notification popup error message.
-                      Then validate that  notification popup error message 
-                      Failed
-                      Enter Manditory fields
-	 * @return : String
-	 * @author : Yaksha
-	 */
-	public String verifyTheNotificationPopupErrorMessageAfterClickOnSaveButton() throws Exception {
-		return null;
-	}
-	
 }
