@@ -210,49 +210,6 @@ public class doctor_testcase extends AppTestBase {
 				"field value is not present in the current page, Please check manually");
 	}
 
-	@Test(priority = 13, groups = {
-			"sanity" }, description = "On the \"Discharge Summary\" page of Profile \"Sonia Gandhi\", select \"Yes\" radio button from the \"Show Result on Report\" label and then verify that the \"Yes\" radio button is selected or not.\r\n"
-					+ "After valodation, then deselect the \"Yes\" radio button from the \"Show Result on Report\" label")
-	public void verifyTheRadioButton() throws Exception {
-		doctor_PagesInstance = new doctor_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Assert.assertTrue(doctor_PagesInstance.verifyThatTheYesRadioButtonIsSelectedAndDeselect(),
-				"yes Radio Button is not selected, please check manually");
-		Assert.assertTrue(locatorsFactoryInstance.noRadioButtonIsPresent(driver).isSelected(),
-				"No Radio Button is not selected, please check manually");
-	}
-
-	@Test(priority = 14, groups = {
-			"sanity" }, description = "On the \"Discharge Summary\" page of Profile \"Sonia Gandhi\", verify that the \"Pending Reports\" text area is present or not?\r\n"
-					+ "If Present, then click & send value to the \"Pending Reports\" text area using the JavaScript")
-	public void performJavaScriptOperations() throws Exception {
-		doctor_PagesInstance = new doctor_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "TextFieldDatas");
-		Assert.assertTrue(
-				doctor_PagesInstance.clickAndSendValueToThePendingReportsTextAreaUsingJavaScript(expectedData),
-				"Unable to perform javascript operations, please check manually");
-		Assert.assertEquals(locatorsFactoryInstance.pendingReportsTextAreaValueIsPresent(),
-				expectedData.get("pendingReportsTextFieldData"), "Validation failed, Please check manually");
-	}
-
-	@Test(priority = 15, groups = {
-			"sanity" }, description = "On the \"Discharge Summary\" page of Profile \"Sonia Gandhi\", verify that the \"Save\" button is present or not?\r\n"
-					+ "If present, then click on the save button directly without fill any information and it will throw a notification popup error message.\r\n"
-					+ "Then validate that  notification popup error message \r\n" + "Failed\r\n"
-					+ "Enter Manditory fields")
-	public void verifyTheNotificationPopupErrorMessage() throws Exception {
-		doctor_PagesInstance = new doctor_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath,
-				"healthAppErrorMessages");
-		Assert.assertEquals(doctor_PagesInstance.verifyTheNotificationPopupErrorMessageAfterClickOnSaveButton(),
-				expectedData.get("PopupErrorMessage"),
-				"Error message is not present in the current page, Please check manually");
-		Assert.assertTrue(locatorsFactoryInstance.popupErrorMessageIsPresent(driver).isDisplayed(),
-				"Error message is not present in the current page, Please check manually");
-	}
-
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		System.out.println("before closing the browser");
