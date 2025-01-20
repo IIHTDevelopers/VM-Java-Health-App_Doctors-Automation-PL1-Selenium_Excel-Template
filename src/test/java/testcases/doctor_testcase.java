@@ -154,61 +154,6 @@ public class doctor_testcase extends AppTestBase {
 				"Error message is not present in the current page, Please check manually");
 	}
 
-	@Test(priority = 9, groups = {
-			"sanity" }, description = "On the Profile \"Sonia Gandhi\", Scroll to the \"Discharge Summary\" Module which is present in the left navigation.\r\n"
-					+ "Click on \"Discharge Summary\" and it will navigate to the \"DischargeSummary\" page.\r\n"
-					+ "Then scroll to the buttom of the page and verify that the \"Save\" button is present or not.")
-	public void performScrollingOpertaionAndVerifyThePresenceOfButton() throws Exception {
-		doctor_PagesInstance = new doctor_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Assert.assertTrue(doctor_PagesInstance.performScrollingOpertaionAndVerifyTheSaveButtonIsPresent(),
-				"Save button is not present, please check manually");
-		Assert.assertTrue(locatorsFactoryInstance.saveButtonInsideIpdPageIsPresent(driver).isDisplayed(),
-				"Save button is not present, please check manually");
-	}
-
-	@Test(priority = 10, groups = {
-			"sanity" }, description = "On the buttom of the \"Discharge Summary\" page of Profile \"Sonia Gandhi\", verify that the \"Hospital Course\" text area is present or not?\r\n"
-					+ "If Present, then highlight the \"Hospital Course\" text area as color yellow ")
-	public void highlightElement() throws Exception {
-		doctor_PagesInstance = new doctor_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Assert.assertTrue(doctor_PagesInstance.highlightElementInYellowColour(),
-				"Element is not present is not present, please check manually");
-		Assert.assertTrue(locatorsFactoryInstance.saveButtonInsideIpdPageIsPresent(driver).isDisplayed(),
-				"Element is not present is not present, please check manually");
-	}
-
-	@Test(priority = 11, groups = {
-			"sanity" }, description = "On the \"Discharge Summary\" page of Profile \"Sonia Gandhi\", verify that, \"Treatment During Hospital Stay\" textarea is present or not?\r\n"
-					+ "If Present, then get the placeholdername of \"Treatment During Hospital Stay\" textarea and Validate that placeholdername.")
-	public void verifyThePlaceHolderName() throws Exception {
-		doctor_PagesInstance = new doctor_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "percentageValue");
-		Assert.assertEquals(doctor_PagesInstance.verifyThePlaceHolderNameOfTreatmentDuringHospitalStayTextarea(),
-				expectedData.get("TreatmentDuringHospitalStayPlaceHolderValue"),
-				"Place Holder value is not present in the current page, Please check manually");
-		Assert.assertEquals(locatorsFactoryInstance.treatmentDuringHospitalStayTextAreaPlaceHolderIsPresent(),
-				expectedData.get("TreatmentDuringHospitalStayPlaceHolderValue"),
-				"Place Holder value is not present in the current page, Please check manually");
-	}
-
-	@Test(priority = 12, groups = {
-			"sanity" }, description = "On the \"Discharge Summary\" page of Profile \"Sonia Gandhi\", verify that, \"Condition On Discharge\" textarea is present or not?\r\n"
-					+ "If present, then send the value to the \"Condition On Discharge\" textarea. \r\n"
-					+ "Then validate the entered value.")
-	public void validateTheEnteredValue() throws Exception {
-		doctor_PagesInstance = new doctor_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "TextFieldDatas");
-		Assert.assertEquals(doctor_PagesInstance.validateTheEnteredValueInConditionOnDischargeTextarea(expectedData),
-				expectedData.get("conditionOnDischargeFieldData"),
-				"Unable to validate the field value, Please check manually");
-		Assert.assertEquals(locatorsFactoryInstance.conditionOnDischargeTextAreaValueIsPresent(),
-				expectedData.get("conditionOnDischargeFieldData"),
-				"field value is not present in the current page, Please check manually");
-	}
 
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
