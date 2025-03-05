@@ -8,47 +8,43 @@ import org.openqa.selenium.WebElement;
 
 public class doctor_Pages extends StartupPage {
 	
-	By usernameTextbox = By.xpath(" ");
-	By passwordTextbox = By.xpath(" ");
-	By signInButton = By.xpath(" ");
-	By registeredPatientTextElement = By.xpath(" ");
-	By doctorTab = By.xpath(" ");
-	By doctorToggle = By.xpath(" ");	
-	By outPatientSubModule = By.xpath(" ");	
-	By inPatientDepartmentSubModule = By.xpath(" ");	
-	By patientRecordSubModule = By.xpath(" ");	
-	By showDoctorWisePatientListCheckBox = By.id(" ");	
-	By departmentFilterDropdown = By.id(" ");	
-	By neurosurgeryOption = By.xpath(" ");	
-	By myFavoritesButton = By.xpath(" ");	
-	By pendingListButton = By.xpath(" ");	
-	By showDetailsButton = By.xpath(" ");	
-	By freeTextTemplatePageTitle = By.xpath(" ");	
-	By XbuttonInFreeTextTemplate = By.xpath(" ");
-	By doctorNameWhereHospitalNumberIs2312000010 = By.xpath(" ");
-	By previewIcon = By.xpath(" ");
-	By problemsModule = By.xpath(" ");
-	By surgicalHistoryTab = By.xpath(" ");
-	By addNewButton = By.xpath(" ");
-	By addButton = By.xpath(" ");
-	By searchProblemFieldErrorMessage = By.xpath("  ");
-	By dischargeSummaryModule = By.xpath(" ");
-	By saveButton = By.xpath(" ");
-	By hospitalCourseTextArea = By.xpath(" ");
-	By treatmentDuringHospitalStayTextArea = By.xpath(" ");
-	By conditionOnDischargeTextArea = By.xpath(" ");
-	By yesRadioButton = By.id(" ");
-	By noRadioButton = By.id(" ");
-	By xButton = By.xpath(" ");
-	By pendingReportsTextArea = By.xpath(" ");
-	By popupErrorMessage = By.xpath(" ");
+//	Locators for TC-1
+	By usernameTextbox = null;
+	By passwordTextbox = null;
+	By signInButton = null;
+	By doctorTab = null;
+//	Locators for TC-2
+	By doctorToggle = null;	
+	By outPatientSubModule = null;	
+	By inPatientDepartmentSubModule = null;	
+	By patientRecordSubModule = null;
+//	Locators for TC-3
+	By showDoctorWisePatientListCheckBox = null;
+//	Locators for TC-4
+	By departmentFilterDropdown = null;
+//	Locators for TC-5
+	By myFavoritesButton = null;
+//	Locators for TC-6
+	By pendingListButton = null;
+	By showDetailsButton = null;
+	By freeTextTemplatePageTitle = null;
+//	Locators for TC-7
+	By XbuttonInFreeTextTemplate = null;
+	By doctorNameWhereHospitalNumberIs2312000010 = null;
+//	Locators for TC-8
+	By previewIcon = null;
+	By problemsModule = null;
+	By surgicalHistoryTab = null;
+	By addNewButton = null;
+	By addButton = null;
+	By searchProblemFieldErrorMessage = null;
 
 	String pageName = this.getClass().getSimpleName();
 	public doctor_Pages(WebDriver driver) {
 		super(driver);
 	}
 	
-	/**@Test1
+	/**@Test1.1
 	 * about this method loginTohealthAppByGivenValidCredetial() 
 	 * @param : Map<String, String>
 	 * @description : fill usernameTextbox & passwordTextbox and click on sign in button
